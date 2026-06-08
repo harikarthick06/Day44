@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-box">
+            <div class="logo-icon">EMP</div>
+            <div>
+                <h2>Employee</h2>
+                <h2>Payroll</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="form-card">
+            <h1>Employee Payroll Form</h1>
+
+            <form id="employeeForm" autocomplete="on">
+                <div class="row-content">
+                    <label for="name" class="label text">Name</label>
+                    <input class="input" type="text" id="name" name="name" placeholder="Your name" required>
+                    <span class="error-output" id="nameError"></span>
+                </div>
+
+                <div class="row-content">
+                    <label class="label text">Profile image</label>
+                    <div class="profile-radio-group">
+                        <label><input type="radio" name="profile" value="profile1" required><span class="avatar avatar1">👨</span></label>
+                        <label><input type="radio" name="profile" value="profile2"><span class="avatar avatar2">👩</span></label>
+                        <label><input type="radio" name="profile" value="profile3"><span class="avatar avatar3">🧑</span></label>
+                        <label><input type="radio" name="profile" value="profile4"><span class="avatar avatar4">👨‍💼</span></label>
+                    </div>
+                </div>
+
+                <div class="row-content">
+                    <label class="label text">Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Male" required> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="row-content">
+                    <label class="label text">Department</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="department" value="HR"> HR</label>
+                        <label><input type="checkbox" name="department" value="Sales"> Sales</label>
+                        <label><input type="checkbox" name="department" value="Finance"> Finance</label>
+                        <label><input type="checkbox" name="department" value="Engineer"> Engineer</label>
+                        <label><input type="checkbox" name="department" value="Others"> Others</label>
+                    </div>
+                    <span class="error-output" id="departmentError"></span>
+                </div>
+
+                <div class="row-content">
+                    <label for="salary" class="label text">Salary</label>
+                    <input class="range" type="range" id="salary" name="salary" min="300000" max="1000000" step="10000" value="400000">
+                    <span class="salary-output" id="salaryOutput">400000</span>
+                </div>
+
+                <div class="row-content date-row">
+                    <label class="label text">Start Date</label>
+                    <div class="date-inputs">
+                        <select id="day" required></select>
+                        <select id="month" required>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                        <select id="year" required></select>
+                    </div>
+                    <span class="error-output" id="dateError"></span>
+                </div>
+
+                <div class="row-content">
+                    <label for="notes" class="label text">Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Enter notes"></textarea>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-card">
+            <h2>Saved Employee Payroll List</h2>
+            <div id="message"></div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Department</th>
+                            <th>Salary</th>
+                            <th>Start Date</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="EmployeePayrollData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

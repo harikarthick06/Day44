@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.header {
+    background-color: white;
+    padding: 18px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #42515f;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #82a70c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.logo-box h2:first-child {
+    color: #82a70c;
+}
+
+.logo-box h2 {
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.main-content {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.form-card,
+.list-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 35px 45px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #42515f;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #42515f;
+    margin-bottom: 18px;
+}
+
+.row-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.label {
+    min-width: 130px;
+    font-size: 16px;
+    color: #42515f;
+    font-weight: 600;
+}
+
+.input,
+textarea,
+select {
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 11px;
+    font-size: 15px;
+}
+
+.input {
+    width: 55%;
+}
+
+textarea {
+    width: 55%;
+    height: 90px;
+    resize: vertical;
+}
+
+.profile-radio-group,
+.radio-group,
+.checkbox-group,
+.date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.profile-radio-group label,
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9f2df;
+    font-size: 22px;
+}
+
+.range {
+    width: 45%;
+}
+
+.salary-output {
+    min-width: 90px;
+    font-weight: bold;
+    color: #42515f;
+}
+
+.error-output {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.success-msg,
+.error-msg {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error-msg {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #82a70c;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #42515f;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .main-content {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .form-card,
+    .list-card {
+        padding: 25px;
+    }
+
+    .row-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .input,
+    textarea,
+    .range {
+        width: 100%;
+    }
+
+    .label {
+        min-width: auto;
+    }
+
+    .button-row {
+        justify-content: stretch;
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-box h2 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .form-card,
+    .list-card {
+        padding: 18px;
+    }
+
+    .profile-radio-group,
+    .radio-group,
+    .checkbox-group,
+    .date-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    select {
+        width: 100%;
+    }
+}
